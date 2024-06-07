@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock title %}
+
+{% block content %}
+    <div>
+        <h2>Рецепт: {{recipe.title}}</h2>
+        <br>
+        <hr>
+        <h4>Описание: <br>{{recipe.description|linebreaksbr }}</h4>
+        <br>
+        <hr>
+        <h4>Ингредиенты : <br>{{recipe.ingredients|linebreaksbr }}</h4>
+        <br>
+        <hr>
+        <h4>Инструкция: <br>{{recipe.instructions|linebreaksbr }}</h4>
+        <hr>
+        {% for i in ingredients %}
+            <h4>{{i.ingredient}}: {{i.quantity}}шт.   </h4>
+            <a href="{% url 'recipes:del_ingredient' recipe.id i.ingredient_id %}" class="btn btn-danger custom-btn btn-sm" >Delete</a>
+        {% endfor %}
+        <br>
+        <button onclick="window.location.href='{% url 'recipes:edit_recipe' recipe.pk %}'" class="btn btn-success -btn btn-sm" >Редактировать рецепт</button>
+
+
+    </div>
+{% endblock content %}

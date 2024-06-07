@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} Дежурные блюда {% endblock title %}
+
+{% block content %}
+    <h1>Все дежурные рецепты</h1>
+    <div>
+        {% for recipe in duty_recipe %}
+                <h2><a href="{% url 'recipes:single_recipe' recipe.pk %}"><h2>{{ recipe.title}}</h2></a>
+        {% endfor %}
+    </div>
+{% endblock content %}

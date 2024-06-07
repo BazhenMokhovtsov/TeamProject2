@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<nav class="navbar bg-body-tertiary">
+    <form class="container-fluid justify-content-start">
+      <button class="btn btn-outline-success me-2" type="button" onclick="window.location.href='{% url 'recipes:show_all_recipes' %}'">Все Рецепты</button>
+      <button class="btn btn-outline-success me-2" type="button" onclick="window.location.href='{% url 'recipes:show_duty_recipes' %}'">Дежурные блюда</button>
+      <button class="btn btn-outline-success me-2" type="button" onclick="window.location.href='{% url 'recipes:add_recipe' %}'">Добавить рецепт</button>
+      <button class="btn btn-outline-success me-2" type="button" onclick="window.location.href='{% url 'recipes:add_ingredient' %}'">Добавить новый ингредиент в базу</button>
+    </form>
+  </nav>
+<body>
+    {% block content %}{% endblock content %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} Рецепты {% endblock title %}
+
+{% block content %}
+    <h1>Все Рецепты</h1>
+    <div>
+        {% for recipe in recipes %}
+                <h2><a href="{% url 'recipes:single_recipe' recipe.pk %}"><h2>{{ recipe.title }}</h2></a>
+        {% endfor %}
+    </div>
+{% endblock content %}

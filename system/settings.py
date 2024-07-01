@@ -26,10 +26,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'recipes',
-    
+
     'ckeditor',
     'ckeditor_uploader',
+    
+    'recipes',
 ]
 
 MIDDLEWARE = [
@@ -124,5 +125,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 #реализация вставки изображений в текст с использованием CKEditor
 CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_BASEPATH = "/my_static/ckeditor/ckeditor/"
+
 #реализация вставки изображений в текст с использованием CKEditor
+

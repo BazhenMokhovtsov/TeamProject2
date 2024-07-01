@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+
 {% block title %} Add new recipe {% endblock title %}
 
 {% block content %}
@@ -7,8 +8,9 @@
 <br>
 <h2>Шаг 1 </h2>
 <br>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
+        {{ recipe_form.media}}
         {{ recipe_form.as_p }}
         <button type="submit">Сохранить</button>
     </form>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Блюда недели{% endblock title %}
+
+{% block content %}
+<h1>Блюда недели</h1>
+<br>
+
+    {% for recipe in random_recipes %}
+    <h2><a href="{% url 'recipes:single_recipe' recipe.pk %}"><h2>{{ recipe.title|striptags }}</h2></a>
+    <a >{{recipe.description|safe}}</a>
+    <hr>
+    {% endfor %}
+
+    <form method="post" action="{% url 'recipes:regenerate_recipes' %}">
+        {% csrf_token %}
+        <button type="submit" name="regenerate" value="true" class="btn btn-success btn-sm">Сгенерировать новую подборку</button>
+    </form>
+
+
+
+{% endblock content %}
+
+
+
+

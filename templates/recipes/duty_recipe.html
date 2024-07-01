@@ -4,9 +4,12 @@
 
 {% block content %}
     <h1>Все дежурные рецепты</h1>
+    <br>
     <div>
         {% for recipe in duty_recipe %}
-                <h2><a href="{% url 'recipes:single_recipe' recipe.pk %}"><h2>{{ recipe.title}}</h2></a>
+        <h2><a href="{% url 'recipes:single_recipe' recipe.pk %}"><h2>{{ recipe.title}}</h2></a>
+        <p>{{recipe.description|safe}}</p>
+        <hr>
         {% endfor %}
     </div>
 {% endblock content %}

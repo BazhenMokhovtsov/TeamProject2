@@ -1,0 +1,69 @@
+.navbar {
+    background-color: rgb(235, 239, 220);
+    max-width: 100%; /* Убедитесь, что ширина панели не превышает ширину окна */
+    box-shadow: 0 4px 20px -2px rgb(77, 49, 204);
+    border-radius: 15px;
+    padding: 1rem; /* Уменьшите padding-top для лучшего отображения */
+    position: absolute; /* Фиксируем панель сверху */
+    top: 15px;
+    left: 10px;
+    right: 10px;
+    z-index: 1000; /* Убедитесь, что панель выше других элементов */
+}
+
+
+
+.content {
+    margin-top: 100px;  /* Отступ должен соответствовать высоте вашей навигационной панели */
+}
+
+body {
+    background-color: rgb(235, 239, 220);
+    max-width: 80%;
+    padding-top: 130px;
+    padding-left: 7%;
+
+    
+
+}
+
+hr {
+    background-color: rgb(111, 164, 116);
+}
+
+.btn {
+    background-color: rgb(152, 129, 254);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+a:hover {
+    color: rgb(188, 14, 110); /* Изменить цвет текста ссылки при наведении на желтый */
+    transition: color 0.3s ease;
+}
+
+a {
+    color: rgb(97, 86, 185); /* Изменить цвет ссылок при наведении */
+    
+}
+
+p {
+    font-size: 18px; /* Увеличение размера шрифта */
+}
+
+
+.link {
+    text-decoration: none; /* Убирает подчеркивание ссылок */
+    color: rgb(77, 49, 204); /* Сохраняет цвет текста */
+}
+
+.link h1 {
+    max-width: 100%;
+    padding: 15px; /* Внутренний отступ, можно изменить по необходимости */
+    background-color: #61a8ac; /* Цвет фона, можно изменить по необходимости */
+    border-radius: 15px; /* Закругленные углы, можно изменить по необходимости */
+    transition: background-color 0.3s; /* Анимация при наведении */
+}
